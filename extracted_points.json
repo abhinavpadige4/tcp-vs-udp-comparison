@@ -1,0 +1,112 @@
+{
+  "topic": "TCP vs UDP",
+  "sources": [
+    {
+      "id": "avast",
+      "title": "TCP vs UDP: Differences Between TCP & UDP Protocols",
+      "url": "https://www.avast.com/c-tcp-vs-udp-difference"
+    },
+    {
+      "id": "avg",
+      "title": "What Is the Difference Between TCP and UDP?",
+      "url": "https://www.avg.com/en/signal/tcp-vs-udp"
+    },
+    {
+      "id": "ipcisco",
+      "title": "TCP vs UDP | 10 Key Differences Explained with Table & Examples",
+      "url": "https://ipcisco.com/lesson/tcp-versus-udp"
+    },
+    {
+      "id": "networklessons",
+      "title": "Introduction to TCP and UDP",
+      "url": "https://networklessons.com/network-fundamentals/introduction-to-tcp-and-udp"
+    },
+    {
+      "id": "gfg",
+      "title": "Differences Between TCP and UDP",
+      "url": "https://www.geeksforgeeks.org/computer-networks/differences-between-tcp-and-udp"
+    }
+  ],
+  "points": [
+    {
+      "category": "connection",
+      "point": "TCP is connection-oriented and uses a 3-way handshake (SYN, SYN-ACK, ACK) before data transfer.",
+      "sources": ["avast", "networklessons", "ipcisco"]
+    },
+    {
+      "category": "connection",
+      "point": "UDP is connectionless; no handshake is performed before sending datagrams.",
+      "sources": ["avast", "avg", "networklessons"]
+    },
+    {
+      "category": "reliability",
+      "point": "TCP provides reliable delivery via ACKs and automatic retransmission of lost segments.",
+      "sources": ["avg", "gfg", "ipcisco"]
+    },
+    {
+      "category": "reliability",
+      "point": "UDP is best-effort; it does not guarantee delivery and does not retransmit.",
+      "sources": ["avg", "gfg"]
+    },
+    {
+      "category": "ordering",
+      "point": "TCP guarantees in-order delivery using sequence numbers.",
+      "sources": ["ipcisco", "networklessons"]
+    },
+    {
+      "category": "ordering",
+      "point": "UDP does not guarantee ordering of datagrams.",
+      "sources": ["ipcisco", "avg"]
+    },
+    {
+      "category": "flow_control",
+      "point": "TCP uses a sliding window for flow control, throttling the sender to the receiver's capacity.",
+      "sources": ["networklessons", "gfg"]
+    },
+    {
+      "category": "flow_control",
+      "point": "UDP has no flow control.",
+      "sources": ["networklessons", "gfg"]
+    },
+    {
+      "category": "congestion_control",
+      "point": "TCP implements congestion control (Reno, CUBIC, BBR) to protect the network.",
+      "sources": ["avg", "gfg"]
+    },
+    {
+      "category": "congestion_control",
+      "point": "UDP has no built-in congestion control; applications must handle it themselves.",
+      "sources": ["avg", "gfg"]
+    },
+    {
+      "category": "header_size",
+      "point": "TCP header is 20 bytes minimum, up to 60 bytes with options.",
+      "sources": ["avast", "ipcisco"]
+    },
+    {
+      "category": "header_size",
+      "point": "UDP header is a fixed 8 bytes.",
+      "sources": ["avast", "ipcisco"]
+    },
+    {
+      "category": "speed",
+      "point": "TCP is slower due to handshake, ACKs, and retransmission overhead.",
+      "sources": ["avg", "avast"]
+    },
+    {
+      "category": "speed",
+      "point": "UDP is faster with minimal overhead, ideal for real-time applications.",
+      "sources": ["avg", "avast"]
+    },
+    {
+      "category": "use_cases",
+      "point": "TCP is used by HTTP/HTTPS, SSH, SMTP, FTP, and database protocols.",
+      "sources": ["avast", "ipcisco", "networklessons"]
+    },
+    {
+      "category": "use_cases",
+      "point": "UDP is used by DNS, VoIP, video streaming, online gaming, NTP, DHCP, and QUIC/HTTP3.",
+      "sources": ["avast", "ipcisco", "networklessons"]
+    }
+  ]
+}
