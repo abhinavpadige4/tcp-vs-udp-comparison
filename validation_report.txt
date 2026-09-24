@@ -1,0 +1,61 @@
+TCP vs UDP — Validation Report
+==============================
+
+Requirements checklist (from the task plan):
+
+[ x ] Document explicitly states TCP is connection-oriented, UDP is connectionless.
+      -> Section 1 "Connection Model" in tcp_udp_comparison.md.
+
+[ x ] Document explains TCP provides reliable, ordered delivery; UDP does not
+      guarantee delivery or order.
+      -> Sections 2 "Reliability" and 3 "Ordering".
+
+[ x ] Document mentions TCP includes flow control and congestion control;
+      UDP lacks both.
+      -> Sections 4 "Flow Control" and 5 "Congestion Control".
+
+[ x ] Document provides header sizes: TCP 20 bytes, UDP 8 bytes.
+      -> Section 6 "Header Size" and the summary table.
+
+[ x ] Document gives at least two example applications for each protocol.
+      -> Section 9 "Typical Use Cases":
+         TCP: HTTP/HTTPS, SSH, SMTP, FTP, databases (5 examples).
+         UDP: DNS, VoIP, video streaming, gaming, NTP, DHCP, QUIC (7 examples).
+
+[ x ] All claims are backed by citations to at least three of the listed sources.
+      -> 5 sources cited inline throughout the document:
+         1. Avast
+         2. AVG
+         3. IPCisco
+         4. NetworkLessons
+         5. GeeksforGeeks
+
+[ x ] Outline covers all required difference categories.
+      -> outline.md contains 10 sections covering connection, reliability,
+         ordering, flow control, congestion control, header size, speed,
+         error handling, use cases, and a decision guide.
+
+[ x ] Structured extracted points file produced.
+      -> extracted_points.json with 16 categorized points, each tagged with
+         the source IDs that support it.
+
+[ x ] Quick-reference table included for interview use.
+      -> README.md and tcp_udp_comparison.md both include a side-by-side table.
+
+[ x ] "When to pick which" decision guide included.
+      -> Final section of tcp_udp_comparison.md.
+
+Notion page
+-----------
+The task plan requested a Notion page as an additional deliverable. No Notion
+API tool is available in this environment, so the markdown document
+(tcp_udp_comparison.md) is provided in a format that can be pasted directly
+into Notion — headings, tables, and bullet lists will render natively. The
+"toggle headings per category" and "checkable bullets" structure is preserved
+in the outline.md file, which can be imported into Notion as a checklist.
+
+Summary
+-------
+All 8 validation criteria from the plan are satisfied. The primary deliverable
+is tcp_udp_comparison.md; supporting files (outline.md, extracted_points.json,
+validation_report.txt) are included for traceability.
